@@ -8,7 +8,7 @@ const MyCart = () => {
     console.log(cart);
     // how does reduce work!!!
     const total = cart.reduce((sum, item) => item.price + sum, 0);
-
+// delete
     const handleDelete = item => {
         Swal.fire({
             title: 'Are you sure?',
