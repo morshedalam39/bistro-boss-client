@@ -1,13 +1,13 @@
 import { Helmet } from "react-helmet-async";
 import { FaTrashAlt } from "react-icons/fa";
 import Swal from "sweetalert2";
-import useCart from "../../hooks/useCart";
+import useCart from "../../../hooks/useCart";
 
 const MyCart = () => {
     const [cart, refetch] = useCart();
     console.log(cart);
     // how does reduce work!!!
-    const total = cart.reduce((sum, item) => item.price + sum, 0);
+    const total = cart?.reduce((sum, item) => item.price + sum, 0);
 // delete
     const handleDelete = item => {
         Swal.fire({

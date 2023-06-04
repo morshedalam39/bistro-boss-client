@@ -12,7 +12,10 @@ import SignUp from "../pages/SignUp/SignUp";
 import PrivateRoute from "./PrivateRoute";
 import Secret from "../pages/Shared/Secret/Secret";
 import Dashboard from "../Layout/Dashboard";
-import MyCart from "../pages/Dashboard/MyCart";
+import MyCart from "../pages/Dashboard/MyCart/MyCart";
+import AllUsers from "../pages/Dashboard/AllUsers/AllUsers";
+import AddItem from "../pages/Dashboard/AddItem/AddItem";
+import AdminRoute from "./AdminRoute";
 
 
 
@@ -50,12 +53,20 @@ import MyCart from "../pages/Dashboard/MyCart";
     },
     {
       path: 'dashboard',
-      element: <Dashboard></Dashboard>, 
+      element: <PrivateRoute><Dashboard></Dashboard></PrivateRoute>, 
       children: [
         {
           path: 'mycart', 
           element: <MyCart></MyCart>
-        }
+        },
+        {
+          path: 'allusers', 
+          element: <AllUsers></AllUsers>
+        },
+        {
+          path: 'addItem', 
+          element: <AdminRoute><AddItem></AddItem></AdminRoute>
+        },
       ]
     }
   ]);
