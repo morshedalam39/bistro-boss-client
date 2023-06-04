@@ -16,6 +16,7 @@ import MyCart from "../pages/Dashboard/MyCart/MyCart";
 import AllUsers from "../pages/Dashboard/AllUsers/AllUsers";
 import AddItem from "../pages/Dashboard/AddItem/AddItem";
 import AdminRoute from "./AdminRoute";
+import ManageItems from "../pages/Dashboard/ManageItems/ManageItems";
 
 
 
@@ -67,6 +68,10 @@ import AdminRoute from "./AdminRoute";
           path: 'addItem', 
           element: <AdminRoute><AddItem></AddItem></AdminRoute>
         },
+        {
+          path: 'manageitems',
+          element: <AdminRoute><ManageItems></ManageItems></AdminRoute>
+        }
       ]
     }
   ]);
